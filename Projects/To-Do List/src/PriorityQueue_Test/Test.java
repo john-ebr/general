@@ -1,4 +1,6 @@
-package PriorityQueue;
+package PriorityQueue_Test;
+
+import PriorityQueue.INTPQueue;
 
 public class Test extends INTPQueue {
 

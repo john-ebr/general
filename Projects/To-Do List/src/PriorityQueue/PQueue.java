@@ -6,7 +6,7 @@ public interface PQueue {
 	public void enter(Task Aufgabe);
 	// enters new Task
 
-	public Task leave();
+	public Task leave() throws PQueueEmptyExecption;
 	// deletes the oldest Object with the highest priority and returns it
 
 	public boolean isEmpty();
