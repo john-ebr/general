@@ -7,32 +7,24 @@ public class INTPQueue implements PQueue {
 	@Override
 	public void enter(Task Aufgabe) {
 		
-		/*	 Aufgabe = new Task();
-		
-		if(Aufgabe.getPriority() == 3) {
-			head.setNext(Aufgabe);
-			Aufgabe.setPrev(head);
-		}
-		else if (Aufgabe.getPriority() == 2 && head.getNext().getPriority() >= 2 && head.getNext() != null) {
-			Task sec_next = head.getNext();
-			sec_next.setNext(Aufgabe);
-			Aufgabe.setPrev(sec_next);
-			
-		}
-		else if(Aufgabe.getPriority() == 1 && head.getNext() != null) {
-			Task sec_next = head.getNext();
-			Task third_next = sec_next.getNext();
-			third_next.setNext(Aufgabe);
-			Aufgabe.setPrev(third_next);
-		}
-		
-		else {
+		if (head.getNext() == null) {
 			
 			head.setNext(Aufgabe);
 			Aufgabe.setPrev(head);
 			
 		}
-		*/
+		else if (head.getNext() != null && Aufgabe.getPriority() == 3) {
+			
+			// gleiche prio oder höher?
+			// einsortieren 
+			// niedrigeren verknüpfen
+			
+		}
+		
+		
+		
+		
+
 	}
 
 	@Override
@@ -84,14 +76,31 @@ public class INTPQueue implements PQueue {
 
 	@Override
 	public Task lastP2() {
-		// TODO Auto-generated method stub
-		return null;
+
+		Task i = lastP3();
+		
+		while(i.getNext() != null && i.getNext().getPriority() == 2 ) {
+			
+			i = i.getNext();
+		}
+		
+		return i;
+		
 	}
 
 	@Override
 	public Task lastP1() {
-		// TODO Auto-generated method stub
-		return null;
+
+		Task i = lastP2();
+		
+		while(i.getNext() != null && i.getNext().getPriority() == 1) {
+			
+			i = i.getNext();
+			
+		}
+		
+		return i;
+		
 	}
 
 }
