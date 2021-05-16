@@ -18,11 +18,11 @@ public class App {
 		if(te.front().getNext() == null) {
 			System.out.println(te.front().getName());
 		}
-		else if(te.front().getNext() != null) {
+		else if(te.front().getNext().getNext() == null) {
 			System.out.println(te.front().getName());
 			System.out.println(te.front().getNext().getName());
 		}
-		else if(te.front().getNext().getNext() != null) {
+		else if(te.front().getNext().getNext().getNext() == null) {
 			System.out.println(te.front().getName());
 			System.out.println(te.front().getNext().getName());
 			System.out.println(te.front().getNext().getNext().getName());

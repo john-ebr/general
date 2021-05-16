@@ -7,7 +7,7 @@ public class INTPQueue implements PQueue {
 	@Override
 	public void enter(Task Aufgabe) {
 		
-		// Aufgabe = new Task();
+		/*	 Aufgabe = new Task();
 		
 		if(Aufgabe.getPriority() == 3) {
 			head.setNext(Aufgabe);
@@ -32,7 +32,7 @@ public class INTPQueue implements PQueue {
 			Aufgabe.setPrev(head);
 			
 		}
-		
+		*/
 	}
 
 	@Override
@@ -64,6 +64,33 @@ public class INTPQueue implements PQueue {
 	@Override
 	public Task back() {
 
+		return null;
+	}
+
+	@Override
+	public Task lastP3() {
+
+		Task i = head;
+		
+		while(i.getNext() != null && i.getNext().getPriority() == 3 ) {
+			
+			i = i.getNext();
+			
+		}
+		
+		return i;
+		
+	}
+
+	@Override
+	public Task lastP2() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Task lastP1() {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

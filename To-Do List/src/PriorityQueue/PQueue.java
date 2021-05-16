@@ -18,5 +18,13 @@ public interface PQueue {
 	public Task back();
 	// returns the newest Object with the lowest Priority
 	
+	public Task lastP3();
+	// returns position of the last Task with the Prioirity 3
+	
+	public Task lastP2();
+	// returns position of the last Task with the prioirity 2
+	
+	public Task lastP1();
+	// returns position of the last Task with the prioirity 1
 	
 }
