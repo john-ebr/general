@@ -20,6 +20,17 @@ public class Task {
 
 	}
 
+	public Task() {
+		
+		id = 0;
+		name = null;
+		content = null;
+		priority = 0;
+		next = null;
+		prev = null;
+		
+	}
+
 	public void setId(int i) {
 
 		id = i;
