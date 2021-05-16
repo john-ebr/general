@@ -15,5 +15,8 @@ public interface PQueue {
 	public Task front();
 	// returns the oldest Object with the highest priority
 	
+	public Task back();
+	// returns the newest Object with the lowest Priority
+	
 	
 }
