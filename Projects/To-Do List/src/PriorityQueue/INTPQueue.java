@@ -24,7 +24,7 @@ public class INTPQueue implements PQueue {
 				Aufgabe.setPrev(i);
 
 			} else {
-				
+
 				head.getNext().setPrev(Aufgabe);
 				Aufgabe.setNext(head.getNext());
 				head.setNext(Aufgabe);
@@ -32,7 +32,7 @@ public class INTPQueue implements PQueue {
 
 			}
 
-		}else if (head.getNext() != null && Aufgabe.getPriority() == 2) {
+		} else if (head.getNext() != null && Aufgabe.getPriority() == 2) {
 
 			if (lastP2() != null) {
 
@@ -44,7 +44,7 @@ public class INTPQueue implements PQueue {
 				Aufgabe.setPrev(i);
 
 			} else {
-				
+
 				head.getNext().setPrev(Aufgabe);
 				Aufgabe.setNext(head.getNext());
 				head.setNext(Aufgabe);
@@ -52,7 +52,7 @@ public class INTPQueue implements PQueue {
 
 			}
 
-		}else if (head.getNext() != null && Aufgabe.getPriority() == 1) {
+		} else if (head.getNext() != null && Aufgabe.getPriority() == 1) {
 
 			if (lastP1() != null) {
 
@@ -64,7 +64,7 @@ public class INTPQueue implements PQueue {
 				Aufgabe.setPrev(i);
 
 			} else {
-				
+
 				head.getNext().setPrev(Aufgabe);
 				Aufgabe.setNext(head.getNext());
 				head.setNext(Aufgabe);
@@ -73,8 +73,6 @@ public class INTPQueue implements PQueue {
 			}
 
 		}
-		
-		
 
 	}
 
@@ -93,13 +91,13 @@ public class INTPQueue implements PQueue {
 	@Override
 	public boolean isEmpty() {
 
-		while(head.getNext() == null) {
+		while (head.getNext() == null) {
 			boolean i = true;
 			return i;
 		}
-		
+
 		return false;
-		
+
 	}
 
 	@Override
@@ -121,7 +119,7 @@ public class INTPQueue implements PQueue {
 		}
 
 		return i;
-		
+
 	}
 
 	@Override
